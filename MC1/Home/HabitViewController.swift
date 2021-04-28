@@ -16,9 +16,10 @@ class HabitViewController: UIViewController {
         
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.sectionInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        layout.sectionInset = UIEdgeInsets(top: 16, left: 0, bottom: 16, right: 0)
         layout.itemSize = CGSize(width: 170, height: 170)
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView?.contentInset = UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16)
         
         collectionView?.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: MyCollectionViewCell.identifier)
         collectionView?.register(HeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier)
@@ -45,6 +46,10 @@ extension HabitViewController: UICollectionViewDelegate, UICollectionViewDataSou
         return cell 
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier, for: indexPath) as! HeaderCollectionReusableView
         
@@ -53,6 +58,6 @@ extension HabitViewController: UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.size.width, height: 200)
+        return CGSize(width: 180, height: 180)
     }
 }

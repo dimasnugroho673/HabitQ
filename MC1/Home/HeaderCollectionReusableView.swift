@@ -29,6 +29,7 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     
     public func configure(){
         backgroundColor = .systemTeal
+        layer.cornerRadius = 10
         addSubview(label)
         addSubview(detail)
     }

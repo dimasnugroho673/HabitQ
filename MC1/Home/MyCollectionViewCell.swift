@@ -23,7 +23,9 @@ class MyCollectionViewCell: UICollectionViewCell {
     
     func updateUI(){
         timeLabel.text = dataHabit.timeLabel
+        timeLabel.tintColor = .black
         habitLabel.text = dataHabit.habitLable
+        habitLabel.tintColor = .black
     }
 
     override func awakeFromNib() {

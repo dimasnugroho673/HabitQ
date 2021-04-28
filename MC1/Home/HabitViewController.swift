@@ -26,7 +26,7 @@ class HabitViewController: UIViewController {
         
         collectionView?.delegate = self
         collectionView?.dataSource = self
-        collectionView?.backgroundColor = .white
+        collectionView?.backgroundColor = .clear
         view.addSubview(collectionView!)
     }
     

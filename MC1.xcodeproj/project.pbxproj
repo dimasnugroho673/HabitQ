@@ -14,6 +14,10 @@
 		B02862682636980B0080A382 /* MC1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B02862662636980B0080A382 /* MC1.xcdatamodeld */; };
 		B028626A2636980C0080A382 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B02862692636980C0080A382 /* Assets.xcassets */; };
 		B028626D2636980C0080A382 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B028626B2636980C0080A382 /* LaunchScreen.storyboard */; };
+		B08147002638FA9D0008BF98 /* HabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08146FF2638FA9D0008BF98 /* HabitViewController.swift */; };
+		B08147042638FEAA0008BF98 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08147022638FEAA0008BF98 /* MyCollectionViewCell.swift */; };
+		B08147052638FEAA0008BF98 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08147032638FEAA0008BF98 /* MyCollectionViewCell.xib */; };
+		B0814709263901620008BF98 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0814708263901620008BF98 /* HeaderCollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		B02862692636980C0080A382 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B028626C2636980C0080A382 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B028626E2636980C0080A382 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B08146FF2638FA9D0008BF98 /* HabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitViewController.swift; sourceTree = "<group>"; };
+		B08147022638FEAA0008BF98 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		B08147032638FEAA0008BF98 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
+		B0814708263901620008BF98 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +70,24 @@
 				B028625F2636980B0080A382 /* SceneDelegate.swift */,
 				B02862612636980B0080A382 /* ViewController.swift */,
 				B02862632636980B0080A382 /* Main.storyboard */,
+				B05395292638502A0052EB22 /* Home */,
 				B02862692636980C0080A382 /* Assets.xcassets */,
 				B028626B2636980C0080A382 /* LaunchScreen.storyboard */,
 				B028626E2636980C0080A382 /* Info.plist */,
 				B02862662636980B0080A382 /* MC1.xcdatamodeld */,
 			);
 			path = MC1;
+			sourceTree = "<group>";
+		};
+		B05395292638502A0052EB22 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B08146FF2638FA9D0008BF98 /* HabitViewController.swift */,
+				B08147022638FEAA0008BF98 /* MyCollectionViewCell.swift */,
+				B08147032638FEAA0008BF98 /* MyCollectionViewCell.xib */,
+				B0814708263901620008BF98 /* HeaderCollectionReusableView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +149,7 @@
 			files = (
 				B028626D2636980C0080A382 /* LaunchScreen.storyboard in Resources */,
 				B028626A2636980C0080A382 /* Assets.xcassets in Resources */,
+				B08147052638FEAA0008BF98 /* MyCollectionViewCell.xib in Resources */,
 				B02862652636980B0080A382 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,9 +162,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B02862622636980B0080A382 /* ViewController.swift in Sources */,
+				B0814709263901620008BF98 /* HeaderCollectionReusableView.swift in Sources */,
 				B02862682636980B0080A382 /* MC1.xcdatamodeld in Sources */,
 				B028625E2636980B0080A382 /* AppDelegate.swift in Sources */,
 				B02862602636980B0080A382 /* SceneDelegate.swift in Sources */,
+				B08147042638FEAA0008BF98 /* MyCollectionViewCell.swift in Sources */,
+				B08147002638FA9D0008BF98 /* HabitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

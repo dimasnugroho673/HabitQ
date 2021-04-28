@@ -13,19 +13,19 @@ class MyCollectionViewCell: UICollectionViewCell {
     
     var dataHabit: DataHabit!
     
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var habitLabel: UILabel!
-    @IBOutlet weak var progress: UIProgressView!
+    @IBOutlet weak var timeHabit: UILabel!
+    @IBOutlet weak var nameHabit: UILabel!
+    @IBOutlet weak var progressHabit: UIProgressView!
     
     static func nib() -> UINib{
         return UINib(nibName: "MyCollectionViewCell", bundle: nil)
     }
     
     func updateUI(){
-        timeLabel.text = dataHabit.timeLabel
-        timeLabel.tintColor = .black
-        habitLabel.text = dataHabit.habitLable
-        habitLabel.tintColor = .black
+        timeHabit.text = dataHabit.timeLabel
+        timeHabit.tintColor = .black
+        nameHabit.text = dataHabit.habitLable
+        nameHabit.tintColor = .black
     }
 
     override func awakeFromNib() {

@@ -53,9 +53,9 @@
             </constraints>
             <size key="customSize" width="192" height="148"/>
             <connections>
-                <outlet property="habitLabel" destination="aSS-1I-R5K" id="78x-dv-luU"/>
-                <outlet property="progress" destination="cTN-NP-o4E" id="iOg-hQ-eNe"/>
-                <outlet property="timeLabel" destination="UUK-rY-asA" id="Fnd-4l-XM3"/>
+                <outlet property="nameHabit" destination="aSS-1I-R5K" id="78x-dv-luU"/>
+                <outlet property="progressHabit" destination="cTN-NP-o4E" id="iOg-hQ-eNe"/>
+                <outlet property="timeHabit" destination="UUK-rY-asA" id="Fnd-4l-XM3"/>
             </connections>
             <point key="canvasLocation" x="34.782608695652179" y="178.79464285714286"/>
         </collectionViewCell>

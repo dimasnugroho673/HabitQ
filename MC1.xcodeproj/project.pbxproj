@@ -14,6 +14,16 @@
 		B02862682636980B0080A382 /* MC1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B02862662636980B0080A382 /* MC1.xcdatamodeld */; };
 		B028626A2636980C0080A382 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B02862692636980C0080A382 /* Assets.xcassets */; };
 		B028626D2636980C0080A382 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B028626B2636980C0080A382 /* LaunchScreen.storyboard */; };
+		B07C4B4B263A477F00C6BB91 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07C4B4A263A477F00C6BB91 /* LibraryViewController.swift */; };
+		B07C4B4D263A47AB00C6BB91 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07C4B4C263A47AB00C6BB91 /* DataViewController.swift */; };
+		B07C4B4F263A47D900C6BB91 /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07C4B4E263A47D900C6BB91 /* LibraryTableViewCell.swift */; };
+		B07C4B52263A4B6F00C6BB91 /* CreateHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07C4B51263A4B6F00C6BB91 /* CreateHabitViewController.swift */; };
+		B07C4B54263A4BAE00C6BB91 /* CreateHabitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07C4B53263A4BAE00C6BB91 /* CreateHabitDelegate.swift */; };
+		B07C4B57263A4DC200C6BB91 /* SegmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07C4B56263A4DC200C6BB91 /* SegmentedViewController.swift */; };
+		B07C4B5A263A52AB00C6BB91 /* SetHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07C4B59263A52AB00C6BB91 /* SetHabitViewController.swift */; };
+		B07C4B5D263A608500C6BB91 /* Habit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07C4B5B263A608500C6BB91 /* Habit+CoreDataClass.swift */; };
+		B07C4B5E263A608500C6BB91 /* Habit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07C4B5C263A608500C6BB91 /* Habit+CoreDataProperties.swift */; };
+		B07C4B60263AD8F700C6BB91 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07C4B5F263AD8F700C6BB91 /* Protocol.swift */; };
 		B08147002638FA9D0008BF98 /* HabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08146FF2638FA9D0008BF98 /* HabitViewController.swift */; };
 		B08147042638FEAA0008BF98 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08147022638FEAA0008BF98 /* MyCollectionViewCell.swift */; };
 		B08147052638FEAA0008BF98 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08147032638FEAA0008BF98 /* MyCollectionViewCell.xib */; };
@@ -30,6 +40,16 @@
 		B02862692636980C0080A382 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B028626C2636980C0080A382 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B028626E2636980C0080A382 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B07C4B4A263A477F00C6BB91 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		B07C4B4C263A47AB00C6BB91 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		B07C4B4E263A47D900C6BB91 /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
+		B07C4B51263A4B6F00C6BB91 /* CreateHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHabitViewController.swift; sourceTree = "<group>"; };
+		B07C4B53263A4BAE00C6BB91 /* CreateHabitDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHabitDelegate.swift; sourceTree = "<group>"; };
+		B07C4B56263A4DC200C6BB91 /* SegmentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedViewController.swift; sourceTree = "<group>"; };
+		B07C4B59263A52AB00C6BB91 /* SetHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetHabitViewController.swift; sourceTree = "<group>"; };
+		B07C4B5B263A608500C6BB91 /* Habit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Habit+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B07C4B5C263A608500C6BB91 /* Habit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Habit+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B07C4B5F263AD8F700C6BB91 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		B08146FF2638FA9D0008BF98 /* HabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitViewController.swift; sourceTree = "<group>"; };
 		B08147022638FEAA0008BF98 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		B08147032638FEAA0008BF98 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -50,6 +70,8 @@
 		B02862512636980B0080A382 = {
 			isa = PBXGroup;
 			children = (
+				B07C4B5B263A608500C6BB91 /* Habit+CoreDataClass.swift */,
+				B07C4B5C263A608500C6BB91 /* Habit+CoreDataProperties.swift */,
 				B028625C2636980B0080A382 /* MC1 */,
 				B028625B2636980B0080A382 /* Products */,
 			);
@@ -66,6 +88,10 @@
 		B028625C2636980B0080A382 /* MC1 */ = {
 			isa = PBXGroup;
 			children = (
+				B07C4B58263A529800C6BB91 /* SetHabit */,
+				B07C4B55263A4DA400C6BB91 /* Detail */,
+				B07C4B50263A4AFE00C6BB91 /* CreateHabit */,
+				B07C4B49263A46DC00C6BB91 /* Library */,
 				B028625D2636980B0080A382 /* AppDelegate.swift */,
 				B028625F2636980B0080A382 /* SceneDelegate.swift */,
 				B02862612636980B0080A382 /* ViewController.swift */,
@@ -75,6 +101,7 @@
 				B028626B2636980C0080A382 /* LaunchScreen.storyboard */,
 				B028626E2636980C0080A382 /* Info.plist */,
 				B02862662636980B0080A382 /* MC1.xcdatamodeld */,
+				B07C4B5F263AD8F700C6BB91 /* Protocol.swift */,
 			);
 			path = MC1;
 			sourceTree = "<group>";
@@ -88,6 +115,41 @@
 				B0814708263901620008BF98 /* HeaderCollectionReusableView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		B07C4B49263A46DC00C6BB91 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				B07C4B4A263A477F00C6BB91 /* LibraryViewController.swift */,
+				B07C4B4C263A47AB00C6BB91 /* DataViewController.swift */,
+				B07C4B4E263A47D900C6BB91 /* LibraryTableViewCell.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		B07C4B50263A4AFE00C6BB91 /* CreateHabit */ = {
+			isa = PBXGroup;
+			children = (
+				B07C4B51263A4B6F00C6BB91 /* CreateHabitViewController.swift */,
+				B07C4B53263A4BAE00C6BB91 /* CreateHabitDelegate.swift */,
+			);
+			path = CreateHabit;
+			sourceTree = "<group>";
+		};
+		B07C4B55263A4DA400C6BB91 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				B07C4B56263A4DC200C6BB91 /* SegmentedViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		B07C4B58263A529800C6BB91 /* SetHabit */ = {
+			isa = PBXGroup;
+			children = (
+				B07C4B59263A52AB00C6BB91 /* SetHabitViewController.swift */,
+			);
+			path = SetHabit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,10 +224,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				B02862622636980B0080A382 /* ViewController.swift in Sources */,
+				B07C4B4D263A47AB00C6BB91 /* DataViewController.swift in Sources */,
+				B07C4B57263A4DC200C6BB91 /* SegmentedViewController.swift in Sources */,
 				B0814709263901620008BF98 /* HeaderCollectionReusableView.swift in Sources */,
+				B07C4B4B263A477F00C6BB91 /* LibraryViewController.swift in Sources */,
 				B02862682636980B0080A382 /* MC1.xcdatamodeld in Sources */,
+				B07C4B52263A4B6F00C6BB91 /* CreateHabitViewController.swift in Sources */,
 				B028625E2636980B0080A382 /* AppDelegate.swift in Sources */,
+				B07C4B5A263A52AB00C6BB91 /* SetHabitViewController.swift in Sources */,
+				B07C4B5D263A608500C6BB91 /* Habit+CoreDataClass.swift in Sources */,
+				B07C4B54263A4BAE00C6BB91 /* CreateHabitDelegate.swift in Sources */,
 				B02862602636980B0080A382 /* SceneDelegate.swift in Sources */,
+				B07C4B5E263A608500C6BB91 /* Habit+CoreDataProperties.swift in Sources */,
+				B07C4B4F263A47D900C6BB91 /* LibraryTableViewCell.swift in Sources */,
+				B07C4B60263AD8F700C6BB91 /* Protocol.swift in Sources */,
 				B08147042638FEAA0008BF98 /* MyCollectionViewCell.swift in Sources */,
 				B08147002638FA9D0008BF98 /* HabitViewController.swift in Sources */,
 			);
@@ -315,7 +387,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SZUL2AFYNB;
+				DEVELOPMENT_TEAM = D7589S3EHF;
 				INFOPLIST_FILE = MC1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -334,7 +406,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SZUL2AFYNB;
+				DEVELOPMENT_TEAM = D7589S3EHF;
 				INFOPLIST_FILE = MC1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

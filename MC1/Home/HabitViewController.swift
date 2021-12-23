@@ -6,8 +6,35 @@
 //
 
 import UIKit
+import CoreData
 
-class HabitViewController: UIViewController {
+class HabitViewController: UIViewController, CreateHabitDelegate {
+    
+    
+    func habitDidSave(nameHabit: String, timeHabit: String, repeatTime: String, durationHabit: Int, goals: String) {
+        loadData()
+        
+        if habit == [] {
+            noHabitsView.isHidden = false
+        } else {
+            noHabitsView.isHidden = true
+        }
+    }
+    
+    var habit = [Habit]()
+    
+    var index = 0
+    var timeHabit = ""
+    var repeatTime = ""
+    var durationTime = ""
+    var nameHabit = ""
+    var goals = ""
+    var progressHabit = 0.0
+    
+    @IBOutlet weak var noHabitsView: UIView!
+    
+    var manageObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
     
     var collectionView: UICollectionView?
 
@@ -28,26 +55,97 @@ class HabitViewController: UIViewController {
         collectionView?.dataSource = self
         collectionView?.backgroundColor = .clear
         view.addSubview(collectionView!)
+        
+        manageObjectContext = appDelegate?.persistentContainer.viewContext as! NSManagedObjectContext
+        
+        loadData()
+        
+        if habit == [] {
+            noHabitsView.isHidden = false
+        } else {
+            noHabitsView.isHidden = true
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        loadData()
+        
+        if habit == [] {
+            noHabitsView.isHidden = false
+        } else {
+            noHabitsView.isHidden = true
+        }
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         collectionView?.frame = view.bounds
     }
+    
+    func loadData(){
+        
+        let habitRequest:NSFetchRequest<Habit> = Habit.fetchRequest()
+        let sort = [NSSortDescriptor(key: "nameHabit", ascending: true)]
+        habitRequest.sortDescriptors = sort
+        
+        do {
+            try habit = manageObjectContext.fetch(habitRequest)
+            collectionView?.reloadData()
+        } catch {
+            print("error")
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination.isKind(of: SegmentedViewController.self){
+            let detailVC = segue.destination as! SegmentedViewController
+            
+            detailVC.indexData = index
+            detailVC.timeHabit = timeHabit
+            detailVC.repeatData = repeatTime
+            detailVC.durationData = durationTime
+            detailVC.nameHabit = nameHabit
+            detailVC.progressHabit = progressHabit
+            detailVC.goals = goals
+        }
+        
+        if let vc = segue.destination as? CreateHabitViewController {
+            vc.delegate = self
+        }
+        
+        if let vc = segue.destination as? SegmentedViewController {
+            vc.delegate = self
+        }
+        
+    }
 }
 
 extension HabitViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        return habit.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCell.identifier, for: indexPath)
+        let habitData = habit[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCell.identifier, for: indexPath) as! MyCollectionViewCell
+        
+        cell.dataHabit = habitData
+        cell.updateUI()
+        
         return cell 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath)
+        index = indexPath.row
+        timeHabit = habit[indexPath.row].timeHabit ?? ""
+        repeatTime = habit[indexPath.row].repeatHabit ?? ""
+        durationTime = String(habit[indexPath.row].durationHabit)
+        nameHabit = habit[indexPath.row].nameHabit ?? ""
+        progressHabit = Double(habit[indexPath.row].progressHabit)
+        goals = habit[indexPath.row].goals ?? ""
+        
+        
+        performSegue(withIdentifier: "detailSegue", sender: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -60,4 +158,5 @@ extension HabitViewController: UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: 180, height: 180)
     }
+    
 }

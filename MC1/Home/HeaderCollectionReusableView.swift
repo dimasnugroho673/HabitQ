@@ -12,16 +12,17 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     
     private let label: UILabel = {
         let label = UILabel()
-        label.text = "header"
+        label.text = "Hello, Simbo!"
         label.textAlignment = .left
         label.textColor = .white
-        label.font = UIFont.boldSystemFont(ofSize: 17)
+        label.font = UIFont.systemFont(ofSize: 24, weight: .heavy)
         return label
     }()
     
     private let detail: UILabel = {
         let label = UILabel()
-        label.text = "detail"
+        label.text = "Life is like riding a bicycle. To keep your balance, you must keep moving. - Albert Einstein"
+        label.numberOfLines = 3
         label.textAlignment = .left
         label.textColor = .white
         return label
